@@ -2,22 +2,22 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
-export default function Home() {
-    const { t } = useTranslation();
+const About = () => {
+    const { t } = useTranslation("about");
 
     return (
-        <div>
-            <h1 className="text-2xl font-bold mb-4">{t("welcome")}</h1>
-
+        <>
+            <h1 className="text-2xl font-bold mb-4">{t("title")}</h1>
+            <p>{t("content")}</p>
             <Link
-                href="/about"
+                href="/about/page"
                 className="inline-block bg-black text-white mt-4 text-center p-2 rounded-lg font-bold"
             >
-                {t("goabout")}
+                Example Page
             </Link>
-        </div>
+        </>
     );
-}
+};
 
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
@@ -26,3 +26,5 @@ export async function getStaticProps({ locale }: { locale: string }) {
         },
     };
 }
+
+export default About;
