@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Navbar from "./Navbar/Navbar";
 import { useRouter } from "next/router";
+import { i18n } from "@/next-i18next.config";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const router = useRouter();
-    const defaultLocale = router.defaultLocale;
+    const defaultLocale = i18n.defaultLocale;
     const locales = router.locales;
 
     return (
