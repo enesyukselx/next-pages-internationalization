@@ -1,6 +1,6 @@
 module.exports = {
     i18n: {
-        locales: ["en", "fr", "tr"],
+        locales: ["en", "fr", "tr", "de"],
         defaultLocale: "en",
         localeDetection: false,
 
@@ -17,6 +17,11 @@ module.exports = {
                 domain: `tr.${process.env.NEXT_PUBLIC_DOMAIN}`,
                 defaultLocale: "tr",
             },
+            {
+                domain: `de.${process.env.NEXT_PUBLIC_DOMAIN}`,
+                defaultLocale: "de",
+            },
         ],
     },
+    fallbackLng: false,
 };

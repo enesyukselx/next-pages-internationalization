@@ -11,7 +11,7 @@ const LangSwitcher = () => {
 
     const changeHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const locale = e.target.value;
-        console.log(locale, defaultLocale);
+
         if (locale === defaultLocale) {
             router.push("http://" + process.env.NEXT_PUBLIC_APP_URL + pathname);
             return;
