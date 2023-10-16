@@ -9,12 +9,6 @@ const About = () => {
         <>
             <h1 className="text-2xl font-bold mb-4">{t("title")}</h1>
             <p>{t("content")}</p>
-            <Link
-                href="/about/page"
-                className="inline-block bg-black text-white mt-4 text-center p-2 rounded-lg font-bold"
-            >
-                Example Page
-            </Link>
         </>
     );
 };
@@ -22,7 +16,7 @@ const About = () => {
 export async function getStaticProps({ locale }: { locale: string }) {
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["about", "common"])),
+            ...(await serverSideTranslations(locale, ["about"])),
         },
     };
 }

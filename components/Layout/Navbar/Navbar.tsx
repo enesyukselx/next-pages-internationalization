@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="bg-white p-4 text-black flex justify-between items-center">
             <div className="font-bold text-3xl">
-                <Link href="/">{t("brand")}</Link>
+                <Link href="/">Brand</Link>
             </div>
             <LangSwitcher />
         </div>
